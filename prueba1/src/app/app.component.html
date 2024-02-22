@@ -1,6 +1,6 @@
 <div class="row" id="maincontainer">
 
-  <div id="innercontainer" *ngIf="!pass">
+  <div id="innercontainer" *ngIf="!pass && !end">
     <H1>En una escala de 1 a 5, ¿cómo calificaría el servicio prestado por el recreacionista contratado? </H1>
     <div class="col-sm-12" class="starslist">
       <ul class="list-inline rating-list" *ngFor="let star of stars" style="display: inline-block">
@@ -10,7 +10,7 @@
       </ul>
     </div>
   </div>
-  <div id="innercontainer" *ngIf="pass">
+  <div id="innercontainer" *ngIf="pass && !end">
     <H3>(opcional) ¿Cómo calificaría la puntualidad del recreacionista contratado? </H3>
     <div class="col-sm-12" class="starslistesmol">
       <ul class="list-inline rating-list" *ngFor="let star of stars" style="display: inline-block">
