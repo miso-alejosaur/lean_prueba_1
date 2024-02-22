@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+#maincontainer {
+    display: flex;
+    justify-content: safe center;
+    align-items: safe center;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+}
+
+h1,
+h3 {
+    margin-bottom: 0;
+    font-family: 'Roboto';
+    font-weight: 500;
+}
+
+hr {
+	width: 45%;
+	color: #e6dddd;
+}

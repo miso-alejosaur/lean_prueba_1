@@ -1,0 +1,59 @@
+<div class="row" id="maincontainer">
+
+  <div id="innercontainer" *ngIf="!pass">
+    <H1>En una escala de 1 a 5, ¿cómo calificaría el servicio prestado por el recreacionista contratado? </H1>
+    <div class="col-sm-12" class="starslist">
+      <ul class="list-inline rating-list" *ngFor="let star of stars" style="display: inline-block">
+        <li (click)="countStar(star)" [ngClass]="{'selected': (star <= selectedValue)}">
+          <i class="fa fa-star"></i>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div id="innercontainer" *ngIf="pass">
+    <H3>(opcional) ¿Cómo calificaría la puntualidad del recreacionista contratado? </H3>
+    <div class="col-sm-12" class="starslistesmol">
+      <ul class="list-inline rating-list" *ngFor="let star of stars" style="display: inline-block">
+        <li (click)="countStarPuntualidad(star)" [ngClass]="{'selected': (star <= selectedValuePuntualidad)}">
+          <i class="fa fa-star"></i>
+        </li>
+      </ul>
+    </div>
+    <hr>
+    <H3>(opcional) ¿Cómo calificaría la actitud del recreacionista contratado? </H3>
+    <div class="col-sm-12" class="starslistesmol">
+      <ul class="list-inline rating-list" *ngFor="let star of stars" style="display: inline-block">
+        <li (click)="countStarActitud(star)" [ngClass]="{'selected': (star <= selectedValueActitud)}">
+          <i class="fa fa-star"></i>
+        </li>
+      </ul>
+    </div>
+    <hr>
+    <H3>(opcional) ¿Cómo calificaría la creatividad del recreacionista contratado? </H3>
+    <div class="col-sm-12" class="starslistesmol">
+      <ul class="list-inline rating-list" *ngFor="let star of stars" style="display: inline-block">
+        <li (click)="countStarCreatividad(star)" [ngClass]="{'selected': (star <= selectedValueCreatividad)}">
+          <i class="fa fa-star"></i>
+        </li>
+      </ul>
+    </div>
+    <hr>
+    <H3>(opcional) ¿Cómo calificaría el dominio del grupo del recreacionista contratado? </H3>
+    <div class="col-sm-12" class="starslistesmol">
+      <ul class="list-inline rating-list" *ngFor="let star of stars" style="display: inline-block">
+        <li (click)="countStarDominio(star)" [ngClass]="{'selected': (star <= selectedValueDominio)}">
+          <i class="fa fa-star"></i>
+        </li>
+      </ul>
+    </div>
+    <hr>
+    <div class="col-sm-12">
+      <H3>(opcional) ¿Desea dejar algún comentario adicional? </H3>
+      <textarea style="resize: none;" #extraInput></textarea>
+    </div>
+    <div class="col-sm-12" (click)="send(extraInput.value)">
+      <button type="submit">ENVIAR</button>
+    </div>
+  </div>
+
+</div>

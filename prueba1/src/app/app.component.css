@@ -1,0 +1,52 @@
+.rating-list li {
+    float: right;
+    color: #ddd;
+    padding: 10px 5px;
+}
+
+.rating-list li:hover,
+.rating-list li:hover~li,
+.rating-list li.selected {
+    color: #ffd700;
+}
+
+.rating-list {
+    display: inline-block;
+    list-style: none;
+    margin: 0;
+}
+
+.starslist {
+    text-align: center;
+    font-size: 50px;
+}
+
+.starslistesmol {
+    text-align: center;
+    font-size: 25px;
+}
+
+#innercontainer {
+    width: 40%;
+    text-align: center;
+}
+
+textarea {
+    resize: none;
+    height: 5rem;
+    width: 80%;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+button {
+    margin-top: 15px;
+    width: 70%;
+    height: 3rem;
+    background-color: rgb(103, 58, 183);
+    color: #fff;
+    font-weight: 700;
+    font-size: 15px;
+    border-radius: 30px;
+    cursor: pointer;
+}
