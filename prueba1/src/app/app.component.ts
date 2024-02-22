@@ -59,7 +59,7 @@ export class AppComponent {
   }
 
   send(extra: string) {
-    this.http.post("https://webhook.site/5c933dfd-b302-409d-9d47-7a294cee04c3", { 'general': this.selectedValue, 'puntualidad': this.selectedValuePuntualidad, 'actitud': this.selectedValueActitud, 'creatividad': this.selectedValueCreatividad, 'dominio': this.selectedValueDominio, 'comments': extra}).subscribe(() => {
+    this.http.post("https://webhook.site/5c933dfd-b302-409d-9d47-7a294cee04c3", { 'general': this.selectedValue, 'puntualidad': this.selectedValuePuntualidad, 'actitud': this.selectedValueActitud, 'creatividad': this.selectedValueCreatividad, 'dominio': this.selectedValueDominio, 'comments': extra}).subscribe(data => {
       alert("Gracias por dejar su opinión.")
       this.end = true
     });
